@@ -27,6 +27,7 @@ func main() {
 		Initialized:           initialized,
 		TextDocumentDidOpen:   textDocumentDidOpen,
 		TextDocumentDidChange: textDocumentDidChange,
+		TextDocumentDidSave:   textDocumentDidSave,
 		Shutdown:              shutdown,
 		SetTrace:              setTrace,
 	}
@@ -57,6 +58,10 @@ func textDocumentDidChange(context *glsp.Context, params *protocol.DidChangeText
 }
 
 func textDocumentDidOpen(context *glsp.Context, params *protocol.DidOpenTextDocumentParams) error {
+	return nil
+}
+
+func textDocumentDidSave(context *glsp.Context, params *protocol.DidSaveTextDocumentParams) error {
 	return nil
 }
 
